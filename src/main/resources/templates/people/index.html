@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+    <link href="/static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+
+<div th:each="person : ${people}">
+    <a class="link-style" th:href="@{/people/{id}(id=${person.getPersonId()})}" th:text="${person.getFio()} + ', ' + ${person.getBirthYear()}"></a>
+</div>
+
+<br>
+
+<hr class="hr-style">
+
+<a class="link-style" th:href="@{/people/new}">Add person</a>
+
+<br>
+
+<a th:href="@{/people/page{page}(page=${page - 1})}">
+    <button class="green-button"><</button>
+</a>
+<a th:href="@{/people/page{page}(page=${page + 1})}">
+    <button class="green-button">></button>
+</a>
+<br>
+<br>
+<form method="post" th:action="@{/logout}">
+    <input type="submit" value="Logout"/>
+</form>
+
+
+</body>
+</html>

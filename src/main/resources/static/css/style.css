@@ -1,0 +1,63 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.link-style {
+    text-decoration: none;
+    color: #007bff; /* Blue color for links, you can change it */
+}
+
+.link-style:hover {
+    text-decoration: underline;
+}
+
+.hr-style {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.green-button {
+    background-color: #28a745; /* Green color for buttons, you can change it */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%; /* Make the button circular */
+    overflow: hidden; /* Ensure perfect circle even if content varies */
+}
+
+.green-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Style form elements */
+form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color: #dc3545; /* Red color for submit button, you can change it */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%; /* Make the input submit circular */
+    overflow: hidden; /* Ensure perfect circle even if content varies */
+}
+
+input[type="submit"]:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
